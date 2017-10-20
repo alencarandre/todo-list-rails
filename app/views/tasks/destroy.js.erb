@@ -1,0 +1,1 @@
+$(".todo-task-list[data-list='<%= @list.id %>'] .tasks").html('<%= j render partial: "lists/tasks", locals: { list: @list } %>');

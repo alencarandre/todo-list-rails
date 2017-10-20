@@ -1,0 +1,10 @@
+<%= simple_form_for([list, Task.new], remote: true) do |f| %>
+  <div class="row">
+    <div class="col-md-10 col-sm-10">
+      <%= f.input(:name, label: false, input_html: { placeholder: t("tasks.task_name")}) %>
+    </div>
+    <div class="col-md-2 col-sm-2">
+      <%= submit_tag "#{t('tasks.add')}", class: "btn " %>
+    </div>
+  </div>
+<% end %>

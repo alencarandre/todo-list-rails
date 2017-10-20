@@ -1,0 +1,17 @@
+<ul class="nav navbar-nav navbar-right">
+    <li>
+        <%= link_to(t("menu.profile"), edit_user_registration_path) %>
+    </li>
+    <li>
+        <%= link_to(t("menu.public_task_lists"), lists_public_index_path) %>
+    </li>
+    <li>
+        <%= link_to(t("menu.my_task_list"), lists_mine_index_path) %>
+    </li>
+    <li>
+        <%= link_to(t("menu.starred_list"), lists_starred_index_path) %>
+    </li>
+    <li>
+        <%= link_to(t("menu.sign_out"), destroy_user_session_path, method: :delete) %>
+    </li>
+</ul>

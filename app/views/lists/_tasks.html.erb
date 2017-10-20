@@ -1,0 +1,18 @@
+<ul>
+  <% list.tasks.all.each do |task| %>
+    <% klass = ("checked " if task.done?) || "" %>
+    <% klass += ("readonly " unless list.mine?(current_user.try(:id))) || "" %>
+    <%= content_tag :li, class: klass, data: { task: task.id, uri: list_task_check_path(list, task) } do %>
+      <%= task.name %>
+      <span class="pull-right">
+        <% if list.mine?(current_user.try(:id)) %>
+          <%= link_to(fa_icon("trash"), list_task_path(list, task),
+                method: :delete,
+                class: 'link-drop-task',
+                remote: true,
+                data: { confirm: t("tasks.are_you_sure") }) %>
+        <% end %>
+      </span>
+    <% end %>
+  <% end %>
+</ul>

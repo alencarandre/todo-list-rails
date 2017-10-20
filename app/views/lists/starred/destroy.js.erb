@@ -1,0 +1,3 @@
+$(".todo-task-list[data-list='<%= @list.id %>']")
+    .closest(".list-container")
+    .html('<%= j render(partial: "lists/todo_task_list", locals: { list: @list })%>');

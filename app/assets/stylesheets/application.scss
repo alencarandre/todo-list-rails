@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "toastr";
+@import "sweetalert2";
+@import 'theme/startbootstrap/creative/css/creative.css';
+@import "todo_task_list";
+@import 'pages/*';
+
+.container {
+  &.main {
+    padding-top: 55px;
+  }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    background-color: #f5f5f5;
+}
+
+.error {
+  color: red;
+}
+
+.error_notification {
+  color: darkorange;
+}
+
+.bottom-align {
+  padding-top: 25px;
+}
+
+.page-title, .page-subtitle {
+  padding-bottom: 20px;
+}
+
+.page-subtitle {
+  padding-top: 20px;
+}
+
+.hidden {
+  display: hidden;
+}
+
+.line-space {
+  height: 25px;
+  width: 100%;
+}
+
+input[type="checkbox"]{
+  &.form-control {
+    height: auto;
+  }
+}

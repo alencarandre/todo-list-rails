@@ -1,0 +1,33 @@
+<% unless smart_listing.empty? %>
+  <div class="clearfix">
+    <%= smart_listing.pagination_per_page_links %>
+    <%= smart_listing.paginate %>
+  </div>
+
+  <div class="line-space"></div>
+
+  <% smart_listing.collection.each_slice(3) do |list| %>
+    <div class="row">
+      <div class="list-container">
+        <%= render(partial: "lists/todo_task_list", locals: { list: list[0] }) if list[0].present? %>
+      </div>
+
+      <div class="list-container">
+        <%= render(partial: "lists/todo_task_list", locals: { list: list[1] }) if list[1].present? %>
+      </div>
+
+      <div class="list-container">
+        <%= render(partial: "lists/todo_task_list", locals: { list: list[2] }) if list[2].present? %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="clearfix">
+    <%= smart_listing.pagination_per_page_links %>
+    <%= smart_listing.paginate %>
+  </div>
+<% else %>
+  <div class="alert alert-warning">
+    <%= t("lists.no_task_list_found") %>
+  </div>
+<% end %>

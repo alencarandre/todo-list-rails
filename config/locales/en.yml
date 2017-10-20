@@ -1,0 +1,115 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  pages:
+    home:
+      share_task_with_your_friends_and_organize_your_live: "Share task with your friends and organize your live"
+      apresentation_text: "ACME Tasks can help you organize your live. Create lists, puts tasks and share. Simply that."
+      find_out_more: "Find out more"
+      better_organization_to_get_focused: "Better organization to get focused"
+      make_your_tasks_better_and_join_to_us: "Make your tasks better and join to us"
+      sign_up_now: "Sign up now"
+      about:
+        about_text: "With ACME Task list you are going to make getting more organization to your live. Do you want to share your party list? You can! See more about and"
+        get_started: "Get Started!"
+        are_you_ready: "Are you ready?"
+      services:
+        stauy_work_or_party: "Study, work or party"
+        stauy_work_or_party_text: "You have ideas, we have tools to realise"
+        starred_list: "Define your favorite lists"
+        starred_list_text: "Do you like a someone list? Do not lose, mark how your favorite and follow the progress it."
+        achieve_your_goals: "Achieve your goals"
+        achieve_your_goals_text: "Go ahead to your dreams, we are together with you"
+        share: "Share your lists"
+        share_text: "Stay the world refreshed about your things"
+      contact:
+        lets_get_in_touch: "Let's Get In Touch!"
+
+  users:
+    sign_up:
+      sign_up: "Sign up"
+      minimum_password_length: "%{minimum_password_length} characters minimum"
+      create_account: "Create account"
+      create_your_account: "Create your account"
+    sign_in:
+      log_in: "Log in"
+    edit:
+      leave_it_blank_to_no_change: "leave it blank if you don't want to change it"
+      give_your_current_password: "we need your current password to confirm your changes"
+      unhappy: Unhappy?"
+      update: "Update"
+      cancel_my_account: "Cancel my account"
+      are_you_sure: "Are you sure?"
+
+  lists:
+    no_task_list_found: "No task lists found"
+    error_on_drop_task_list: "Error on drop task list"
+    mine:
+      my_task_lists: "My task lists"
+      new: "New list"
+      create: "Create"
+      cancel: "Cancel"
+      are_you_sure: "Are you sure?"
+    starred:
+      my_starred_lists: "My starred lists"
+    public:
+      public_lists: "Public lists"
+
+  tasks:
+    add_task: "Add task"
+    add: "Add "
+    task_name: "Task name"
+    are_you_sure: "Are you sure?"
+
+  menu:
+    sign_in: "Sign in"
+    sign_out: "Sign out"
+    sign_up: "Sign up"
+    public_task_lists: "Public tasks lists"
+    my_task_lists: "My task lists"
+    new_task_list: "New task list"
+    starred_list: "Starred lists"
+    profile: "Profile"
+
+  company: "ACME"
+
+  footer:
+    copyright: "Copyright Acme - All rights reserved"
+    by: "André Alencar"
+
+  helpers:
+    label:
+      search:
+        term: "Search lists"
+    list:
+      star_this_list: "Star this list"
+      unstar_this_list: "Unstar this list"

@@ -1,0 +1,34 @@
+<div class="todo-task-list" data-list="<%= list.id %>">
+  <div class="col-md-4">
+    <div class="header">
+      <div class="row">
+          <div class="pull-left">
+            <%= fa_icon("key") unless list.public? %>
+            <%= list.user.name %> &nbsp;
+          </div>
+
+          <div class="pull-right">
+            <%= link_starred(list) %>
+            <%= link_drop_list(list) %>
+          </div>
+      </div>
+
+      <div class="line-space"></div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h4><%= list.name %></h4>
+        </div>
+      </div>
+
+      <%= render partial: "lists/form_new_task", locals: { list: list } if controller_name == 'mine' %>
+    </div>
+
+    <div class="tasks">
+      <%= render partial: "lists/tasks", locals: { list: list } %>
+    </div>
+
+    <div class="line-space"></div>
+    <div class="line-space"></div>
+  </div>
+</div>

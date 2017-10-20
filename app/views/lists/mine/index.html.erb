@@ -1,0 +1,27 @@
+<div class="page-title">
+  <h2><%= t("lists.mine.my_task_lists") %></h2>
+</div>
+
+<div class="new-task-list-container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="pull-right bottom-align">
+        <%= content_tag :button, fa_icon("plus") + " #{t('lists.mine.new')}", class: "btn btn-primary new-task-list" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="line-space"></div>
+
+<div class="hidden new-task-list-form-container">
+  <div class="row well">
+    <%= render partial: 'lists/form', locals: { subject: @list } %>
+  </div>
+
+  <div class="line-space"></div>
+</div>
+
+<div class="lists">
+  <%= smart_listing_render(:lists) %>
+</div>
